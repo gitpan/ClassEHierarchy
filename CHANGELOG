@@ -1,0 +1,52 @@
+
+RCS file: RCS/EHierarchy.pm,v
+Working file: EHierarchy.pm
+head: 0.6
+branch:
+locks: strict
+	acorliss: 0.6
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 6;	selected revisions: 6
+description:
+EHierarchy.pm:  Base class aggregating multiple OO characteristics
+----------------------------
+revision 0.6	locked by: acorliss;
+date: 2003/02/18 23:09:03;  author: acorliss;  state: Exp;  lines: +42 -14
+--Changed name of module to Class::EHierarchy
+--Added can() method to check for properties/flags that no permament
+  method had been created for yet via the AUTOLOADER
+----------------------------
+revision 0.5
+date: 2003/02/07 00:24:14;  author: acorliss;  state: Exp;  lines: +61 -6
+--Added checkState method for one step logical flag checking
+--POD updates
+----------------------------
+revision 0.4
+date: 2003/01/31 22:25:12;  author: acorliss;  state: Exp;  lines: +45 -14
+--Constructor arguments can now take properties and flags as part of a
+  single flat hash
+--Event handlers were only being called on modification calls, not read
+  calls.  Fixed.
+--_genPropAccessor wasn't dereferencing hashes correctly on reads.  Fixed.
+--Documentation updates.
+----------------------------
+revision 0.3
+date: 2003/01/30 18:45:28;  author: acorliss;  state: Exp;  lines: +78 -65
+--Added hasFlag/hasProperty methods
+--Modified flag method to use return value of event handler as new register
+  value
+--Updated documentation
+----------------------------
+revision 0.2
+date: 2003/01/29 19:04:53;  author: acorliss;  state: Exp;  lines: +89 -68
+--Added a property method that operates in the same fashion as the flags
+  method
+--AUTOLOAD is only called once for each virtual method, since a permanent
+  method is created at that time with eval
+----------------------------
+revision 0.1
+date: 2003/01/29 17:46:11;  author: acorliss;  state: Exp;
+--Initial revision
+=============================================================================
